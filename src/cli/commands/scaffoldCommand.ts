@@ -5,7 +5,6 @@ import {
   bundler,
   formatter,
   linter,
-  language,
   project
 } from '@app/cli/options';
 import {
@@ -20,7 +19,6 @@ scaffoldCommand
   .addArgument(nameArgument)
   .addOption(bundler.makeOptionMandatory(false))
   .addOption(formatter.makeOptionMandatory(false))
-  .addOption(language.makeOptionMandatory(false))
   .addOption(linter.makeOptionMandatory(false))
   .addOption(project.makeOptionMandatory(false))
   .action((name, options) => scaffoldHandler({ name, options }));
