@@ -1,0 +1,1 @@
+export { nameValidator } from './nameValidator';

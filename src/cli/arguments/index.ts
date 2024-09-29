@@ -1,0 +1,1 @@
+export { nameArgument } from './nameArgument';
