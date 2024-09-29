@@ -1,8 +1,8 @@
 {
-  "name": "leith",
+  "name": "tsgen",
   "description": "A TypeScript CLI for generating TypeScript projects",
   "version": "0.1.1",
-  "main": "./dist/leith.cjs",
+  "main": "./dist/tsgen.cjs",
   "type": "module",
   "engines": {
     "node": ">=20.0.0",

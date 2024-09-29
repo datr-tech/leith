@@ -25,7 +25,7 @@ export default {
   },
   target: 'node',
   output: {
-    filename: 'leith.cjs',
+    filename: 'tsgen.cjs',
     path: path.resolve(__dirname, 'dist'),
   },
 };
