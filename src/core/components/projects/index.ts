@@ -1,0 +1,1 @@
+export { nodeComponent } from './nodeComponent';

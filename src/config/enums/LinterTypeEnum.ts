@@ -1,4 +1,4 @@
-export enum LinterEnum {
+export enum LinterTypeEnum {
   ESLINT = 'ESLINT',
   UNKNOWN = 'UNKNOWN',
 }

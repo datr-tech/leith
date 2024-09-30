@@ -1,8 +1,4 @@
-import {
-  jestReadFileSync,
-  jestRemoveFileSync,
-  jestTouchFileSync,
-} from './funcs';
+import { jestReadFileSync, jestRemoveFileSync, jestTouchFileSync } from './funcs';
 
 global.jestReadFileSync = jestReadFileSync;
 global.jestRemoveFileSync = jestRemoveFileSync;

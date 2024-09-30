@@ -1,0 +1,1 @@
+export { typescriptComponent } from './typescriptComponent';

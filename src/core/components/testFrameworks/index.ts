@@ -1,0 +1,1 @@
+export { jestTypescriptComponent } from './jestTypescriptComponent';

@@ -1,0 +1,1 @@
+export { eslintTypescriptComponent } from './eslintTypescriptComponent';

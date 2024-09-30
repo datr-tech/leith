@@ -1,0 +1,1 @@
+export { gitComponent } from './gitComponent';

@@ -1,0 +1,1 @@
+export { prettierEslintComponent } from './prettierEslintComponent';

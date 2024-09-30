@@ -1,6 +1,11 @@
 export interface IComponent {
   name: string;
-  dependencies: string[];
-  actions: string[];
-
+  actions?: object;
+  children?: string[];
+  config?: string[];
+  dependencies?: string[];
+  parents?: string[];
+  path?: string;
+  requires?: string[];
+  scripts?: object;
 }

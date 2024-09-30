@@ -1,9 +1,4 @@
-import {
-  jestAppMocksDir,
-  jestAppRootDir,
-  jestAppMocksTemplatesDir,
-  jestAppTestDir,
-} from './paths';
+import { jestAppMocksDir, jestAppRootDir, jestAppMocksTemplatesDir, jestAppTestDir } from './paths';
 
 global.JEST_APP_MOCKS_DIR = jestAppMocksDir;
 global.JEST_APP_ROOT_DIR = jestAppRootDir;

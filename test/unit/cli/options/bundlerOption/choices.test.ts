@@ -10,10 +10,7 @@ describe('cli', () => {
 
           // Act
           const { argChoices } = bundlerOption;
-          const firstChoice =
-            typeof argChoices !== 'undefined' && argChoices.length > 0
-              ? argChoices[0]
-              : '';
+          const firstChoice = typeof argChoices !== 'undefined' && argChoices.length > 0 ? argChoices[0] : '';
 
           // Assert
           expect(firstChoice).toEqual(expected);
