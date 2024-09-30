@@ -25,7 +25,7 @@ export default {
   },
   target: 'node',
   output: {
-    filename: 'leith.cjs',
+    filename: 'prepack.cjs',
     path: path.resolve(__dirname, 'dist'),
   },
 };

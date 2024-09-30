@@ -1,8 +1,8 @@
 {
-  "name": "leith",
-  "description": "A CLI for scaffolding TypeScript projects",
+  "name": "prepack",
+  "description": "A CLI for pre-packing TypeScript projects",
   "version": "0.1.1",
-  "main": "./dist/leith.cjs",
+  "main": "./dist/prepack.cjs",
   "type": "module",
   "engines": {
     "node": ">=20.0.0",
