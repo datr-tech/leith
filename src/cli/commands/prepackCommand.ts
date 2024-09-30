@@ -3,6 +3,7 @@ import { prepackHandler } from '@app/cli/handlers';
 import { nameArgument } from '@app/cli/arguments';
 import {
   bundlerOption,
+  configOption,
   formatterOption,
   linterOption,
   projectOption,
@@ -18,6 +19,7 @@ prepackCommand
   .description(CONSTS_COMMAND_PREPACK_DESCRIPTION)
   .addArgument(nameArgument)
   .addOption(bundlerOption.makeOptionMandatory(false))
+  .addOption(configOption.makeOptionMandatory(false))
   .addOption(formatterOption.makeOptionMandatory(false))
   .addOption(linterOption.makeOptionMandatory(false))
   .addOption(projectOption.makeOptionMandatory(false))
