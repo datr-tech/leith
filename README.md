@@ -1,5 +1,5 @@
-# ts.gen
+# leith
 
-> A TypeScript CLI for generating Typescript projects
+> A CLI for generating Typescript projects
 
 ## BEWARE: Currently in development
