@@ -5,6 +5,7 @@
       "baseUrl": ".",
       "esModuleInterop": true,
       "lib": ["es6"],
+      "module": "esnext",
       "moduleResolution": "node",
       "outDir": "dist",
       "paths": {

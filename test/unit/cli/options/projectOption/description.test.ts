@@ -6,8 +6,7 @@ describe('cli', () => {
       describe('description', () => {
         test('should be valid', () => {
           // Arrange
-          const expected =
-              "The new project's type. Defaults to NODE.";
+          const expected = "The new project's type. Defaults to NODE.";
 
           // Act
           const { description } = projectOption;

@@ -1,1 +1,1 @@
-export { scaffoldCommand } from './scaffoldCommand';
+export { prepackCommand } from './prepackCommand';

@@ -1,5 +1,5 @@
-# leith
+# prepack
 
-> A CLI for generating Typescript projects
+> A CLI for pre-packing JavaScript, Typescript and related projects
 
 ## BEWARE: Currently in development

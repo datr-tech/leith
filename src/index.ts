@@ -1,5 +1,5 @@
 import { Command } from 'commander';
-import { scaffoldCommand } from '@app/cli/commands';
+import { prepackCommand } from '@app/cli/commands';
 import {
   CONSTS_PROGRAMME_DESCRIPTION,
   CONSTS_PROGRAMME_NAME,
@@ -14,5 +14,5 @@ program
   .description(CONSTS_PROGRAMME_DESCRIPTION)
   .version(version);
 
-program.addCommand(scaffoldCommand, { isDefault: true });
+program.addCommand(prepackCommand, { isDefault: true });
 program.parse(process.argv);

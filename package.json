@@ -1,6 +1,6 @@
 {
   "name": "prepack",
-  "description": "A CLI for pre-packing TypeScript projects",
+  "description": "A CLI for pre-packing JavaScript, Typescript and related projects",
   "version": "0.1.1",
   "main": "./dist/prepack.cjs",
   "type": "module",

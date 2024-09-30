@@ -6,8 +6,7 @@ describe('cli', () => {
       describe('description', () => {
         test('should be valid', () => {
           // Arrange
-          const expected =
-            "The new project's formatter. Defaults to PRETTIER.";
+          const expected = "The new project's formatter. Defaults to PRETTIER.";
 
           // Act
           const { description } = formatterOption;

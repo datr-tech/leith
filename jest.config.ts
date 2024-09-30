@@ -1,7 +1,5 @@
 export default {
-  "coveragePathIgnorePatterns": [
-    "<rootDir>/.jest",
-  ],
+  coveragePathIgnorePatterns: ['<rootDir>/.jest'],
   coverageReporters: ['clover', 'text'],
   coverageThreshold: {
     global: {

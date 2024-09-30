@@ -1,6 +1,6 @@
 import { logger } from '@app/utils';
 
-export const scaffoldHandler = ({ ...args }) => {
+export const prepackHandler = ({ ...args }) => {
   const name = args?.path;
   const options = args?.options;
   logger.info({ name, options });

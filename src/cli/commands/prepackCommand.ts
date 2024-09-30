@@ -1,5 +1,5 @@
 import { Command } from 'commander';
-import { scaffoldHandler } from '@app/cli/handlers';
+import { prepackHandler } from '@app/cli/handlers';
 import { nameArgument } from '@app/cli/arguments';
 import {
   bundlerOption,
@@ -8,17 +8,17 @@ import {
   projectOption,
 } from '@app/cli/options';
 import {
-  CONSTS_COMMAND_SCAFFOLD_DESCRIPTION,
-  CONSTS_COMMAND_SCAFFOLD_NAME,
+  CONSTS_COMMAND_PREPACK_DESCRIPTION,
+  CONSTS_COMMAND_PREPACK_NAME,
 } from '@app/config/consts';
 
-export const scaffoldCommand = new Command(CONSTS_COMMAND_SCAFFOLD_NAME);
+export const prepackCommand = new Command(CONSTS_COMMAND_PREPACK_NAME);
 
-scaffoldCommand
-  .description(CONSTS_COMMAND_SCAFFOLD_DESCRIPTION)
+prepackCommand
+  .description(CONSTS_COMMAND_PREPACK_DESCRIPTION)
   .addArgument(nameArgument)
   .addOption(bundlerOption.makeOptionMandatory(false))
   .addOption(formatterOption.makeOptionMandatory(false))
   .addOption(linterOption.makeOptionMandatory(false))
   .addOption(projectOption.makeOptionMandatory(false))
-  .action((name, options) => scaffoldHandler({ name, options }));
+  .action((name, options) => prepackHandler({ name, options }));

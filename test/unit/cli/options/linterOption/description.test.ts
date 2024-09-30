@@ -6,8 +6,7 @@ describe('cli', () => {
       describe('description', () => {
         test('should be valid', () => {
           // Arrange
-          const expected =
-              "The new project's linter. Defaults to ESLINT.";
+          const expected = "The new project's linter. Defaults to ESLINT.";
 
           // Act
           const { description } = linterOption;

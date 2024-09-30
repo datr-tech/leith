@@ -1,1 +1,1 @@
-export { scaffoldHandler } from './scaffoldHandler';
+export { prepackHandler } from './prepackHandler';
