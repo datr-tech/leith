@@ -1,4 +1,4 @@
-export { bundler } from './bundler';
-export { formatter } from './formatter';
-export { linter } from './linter';
-export { project } from './project';
+export { bundlerOption } from './bundlerOption';
+export { formatterOption } from './formatterOption';
+export { linterOption } from './linterOption';
+export { projectOption } from './projectOption';

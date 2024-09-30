@@ -2,10 +2,10 @@ import { Command } from 'commander';
 import { scaffoldHandler } from '@app/cli/handlers';
 import { nameArgument } from '@app/cli/arguments';
 import {
-  bundler,
-  formatter,
-  linter,
-  project
+  bundlerOption,
+  formatterOption,
+  linterOption,
+  projectOption,
 } from '@app/cli/options';
 import {
   CONSTS_COMMAND_SCAFFOLD_DESCRIPTION,
@@ -17,8 +17,8 @@ export const scaffoldCommand = new Command(CONSTS_COMMAND_SCAFFOLD_NAME);
 scaffoldCommand
   .description(CONSTS_COMMAND_SCAFFOLD_DESCRIPTION)
   .addArgument(nameArgument)
-  .addOption(bundler.makeOptionMandatory(false))
-  .addOption(formatter.makeOptionMandatory(false))
-  .addOption(linter.makeOptionMandatory(false))
-  .addOption(project.makeOptionMandatory(false))
+  .addOption(bundlerOption.makeOptionMandatory(false))
+  .addOption(formatterOption.makeOptionMandatory(false))
+  .addOption(linterOption.makeOptionMandatory(false))
+  .addOption(projectOption.makeOptionMandatory(false))
   .action((name, options) => scaffoldHandler({ name, options }));

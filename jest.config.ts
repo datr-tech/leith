@@ -1,4 +1,7 @@
 export default {
+  "coveragePathIgnorePatterns": [
+    "<rootDir>/.jest",
+  ],
   coverageReporters: ['clover', 'text'],
   coverageThreshold: {
     global: {
@@ -16,7 +19,7 @@ export default {
     '<rootDir>/.jest/setupFunctions.ts',
   ],
   testEnvironment: 'node',
-  testPathIgnorePatterns: ['/node_modules/'],
+  testPathIgnorePatterns: ['<rootDir>/node_modules/'],
   transform: {
     '^.+.tsx?$': ['ts-jest', {}],
   },
