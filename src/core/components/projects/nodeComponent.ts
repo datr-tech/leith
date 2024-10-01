@@ -1,7 +1,7 @@
 import { IComponent } from '@app/interfaces/core/components';
 
 export const nodeComponent: IComponent = {
-  name: 'languages/typescript',
+  name: 'projects/node',
   dependencies: ['@types/node'],
   actions: {
     files: {

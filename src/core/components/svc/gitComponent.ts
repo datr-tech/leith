@@ -1,7 +1,7 @@
 import { IComponent } from '@app/interfaces/core/components';
 
 export const gitComponent: IComponent = {
-  name: 'projects/node',
+  name: 'svc/git',
   actions: {
     files: {
       write: [
