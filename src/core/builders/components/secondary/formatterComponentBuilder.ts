@@ -9,12 +9,12 @@ export const formatterComponentBuilder: IComponentSecondaryBuilder = ({ language
     throw new Error('undefined languageComponent');
   }
 
-  if (typeof linterComponent === 'undefined') {
-    throw new Error('undefined linterComponent');
-  }
-
   if (languageComponent.name === 'languages/typescript') {
-    if (linterComponent.name === 'linters/eslint/typescript') {
+    if (
+      typeof linterComponent !== 'undefined' &&
+      typeof linterComponent.name !== 'undefined' &&
+      linterComponent.name === 'linters/eslint/typescript'
+    ) {
       formatterComponent = prettierEslintComponent;
     }
   }

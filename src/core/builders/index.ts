@@ -1,1 +1,0 @@
-export { bundlerComponentBuilder } from './bundlerComponentBuilder';
