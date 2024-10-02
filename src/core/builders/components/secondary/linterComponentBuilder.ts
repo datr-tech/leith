@@ -5,6 +5,10 @@ import { eslintTypescriptComponent } from '@app/core/components/secondary/linter
 export const linterComponentBuilder: IComponentSecondaryBuilder = ({ languageComponent }) => {
   let linterComponent: IComponent;
 
+  if (typeof languageComponent === 'undefined') {
+    throw new Error('undefined languageComponent');
+  }
+
   if (languageComponent.name === 'languages/typescript') {
     linterComponent = eslintTypescriptComponent;
   }

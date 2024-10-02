@@ -6,12 +6,33 @@ describe('core', () => {
       describe('primary', () => {
         describe('languageComponentBuilder', () => {
           describe('negative', () => {
-            test.each([[''], ['languages'], ['languages/'], ['languages/node']])(
-              "type '%s' should return undefined",
-              (type) => {
-                expect(languageComponentBuilder({ type })).toBeUndefined();
-              },
-            );
+            describe('should return an error', () => {
+              test("when 'type' is an empty string", () => {
+                // Arrange
+                const type = '';
+                const errorExpected = 'invalid type';
+
+                // Act
+                const handler = () => {
+                  languageComponentBuilder({ type });
+                };
+
+                // Assert
+                expect(handler).toThrow(errorExpected);
+              });
+            });
+            describe('should return undefined', () => {
+              test("when 'type' is an unknown string", () => {
+                // Arrange
+                const type = 'unknown';
+
+                // Act
+                const languageComponent = languageComponentBuilder({ type });
+
+                // Assert
+                expect(languageComponent).toBeUndefined();
+              });
+            });
           });
         });
       });

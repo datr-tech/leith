@@ -5,6 +5,10 @@ import { jestTypescriptComponent } from '@app/core/components/secondary/testFram
 export const testFrameworkComponentBuilder: IComponentSecondaryBuilder = ({ languageComponent }) => {
   let testFrameworksComponent: IComponent;
 
+  if (typeof languageComponent === 'undefined') {
+    throw new Error('undefined languageComponent');
+  }
+
   if (languageComponent.name === 'languages/typescript') {
     testFrameworksComponent = jestTypescriptComponent;
   }

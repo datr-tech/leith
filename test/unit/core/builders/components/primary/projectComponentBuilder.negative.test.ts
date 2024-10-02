@@ -6,8 +6,32 @@ describe('core', () => {
       describe('primary', () => {
         describe('projectComponentBuilder', () => {
           describe('negative', () => {
-            test.each([[''], ['projects'], ['projects/']])("type '%s' should return undefined", (type) => {
-              expect(projectComponentBuilder({ type })).toBeUndefined();
+            describe('should return an error', () => {
+              test("when 'type' is an empty string", () => {
+                // Arrange
+                const type = '';
+                const errorExpected = 'invalid type';
+
+                // Act
+                const handler = () => {
+                  projectComponentBuilder({ type });
+                };
+
+                // Assert
+                expect(handler).toThrow(errorExpected);
+              });
+            });
+            describe('should return undefined', () => {
+              test("when 'type' is an unknown string", () => {
+                // Arrange
+                const type = 'unknown';
+
+                // Act
+                const projectComponent = projectComponentBuilder({ type });
+
+                // Assert
+                expect(projectComponent).toBeUndefined();
+              });
             });
           });
         });
