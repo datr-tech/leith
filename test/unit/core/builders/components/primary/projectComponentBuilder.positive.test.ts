@@ -8,11 +8,11 @@ describe('core', () => {
           describe('positive', () => {
             test('should return the expected project component', () => {
               // Arrange
-              const type = 'projects/node';
-              const nameExpected = type;
+              const name = 'projects/node';
+              const nameExpected = name;
 
               // Act
-              const projectComponent = projectComponentBuilder({ type });
+              const projectComponent = projectComponentBuilder({ name });
               const nameFound = projectComponent.name;
 
               // Assert

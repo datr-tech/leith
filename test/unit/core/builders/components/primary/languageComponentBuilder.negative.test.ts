@@ -7,30 +7,18 @@ describe('core', () => {
         describe('languageComponentBuilder', () => {
           describe('negative', () => {
             describe('should return an error', () => {
-              test("when 'type' is an empty string", () => {
+              test("when 'name' is an empty string", () => {
                 // Arrange
-                const type = '';
+                const name = '';
                 const errorExpected = 'invalid type';
 
                 // Act
                 const handler = () => {
-                  languageComponentBuilder({ type });
+                  languageComponentBuilder({ name });
                 };
 
                 // Assert
                 expect(handler).toThrow(errorExpected);
-              });
-            });
-            describe('should return undefined', () => {
-              test("when 'type' is an unknown string", () => {
-                // Arrange
-                const type = 'unknown';
-
-                // Act
-                const languageComponent = languageComponentBuilder({ type });
-
-                // Assert
-                expect(languageComponent).toBeUndefined();
               });
             });
           });

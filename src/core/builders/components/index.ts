@@ -1,1 +1,1 @@
-export { componentBuilder } from './componentBuilder';
+export { componentsBuilder } from './componentsBuilder';

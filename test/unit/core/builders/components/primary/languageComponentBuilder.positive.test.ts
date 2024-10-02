@@ -8,11 +8,11 @@ describe('core', () => {
           describe('positive', () => {
             test('should return the expected language component', () => {
               // Arrange
-              const type = 'languages/typescript';
-              const nameExpected = type;
+              const name = 'languages/typescript';
+              const nameExpected = name;
 
               // Act
-              const languageComponent = languageComponentBuilder({ type });
+              const languageComponent = languageComponentBuilder({ name });
               const nameFound = languageComponent.name;
 
               // Assert
