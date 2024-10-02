@@ -21,7 +21,7 @@
     "start": "node ./dist/repack.cjs",
     "dev": "npx tsx ./src/index.ts",
     "test:base": "npx jest",
-    "test:unit": "npm run test:base ./test/unit",
+    "test:unit": "npm run test:base -- ./test/unit",
     "test:unit:cov": "npm run test:unit -- --coverage",
     "test:unit:changed": "npm run test:unit -- -o",
     "test": "npm run test:unit:cov",
