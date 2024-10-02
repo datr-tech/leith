@@ -7,12 +7,12 @@ import {
   svcComponentBuilder,
   testFrameworkComponentBuilder,
 } from '@app/core/builders/components/secondary';
-import { IComponentBuilder } from '@app/interfaces/core/builders';
+import { IComponentsBuilder } from '@app/interfaces/core/builders';
 
-export const componentBuilder: IComponentBuilder = ({ options }) => {
-  const buildPrimaryComponents = ({ options }) => ({
-    projectComponent: projectComponentBuilder({ type: options.project.name }),
-    languageComponent: languageComponentBuilder({ type: options.language.name }),
+export const componentsBuilder: IComponentsBuilder = ({ language, project }) => {
+  const buildPrimaryComponents = ({ language, project }) => ({
+    projectComponent: projectComponentBuilder({ name: project.name }),
+    languageComponent: languageComponentBuilder({ name: language.name }),
   });
 
   const buildSecondaryComponents = ({ languageComponent }) => {
@@ -33,7 +33,10 @@ export const componentBuilder: IComponentBuilder = ({ options }) => {
     ];
   };
 
-  const { projectComponent, languageComponent } = buildPrimaryComponents({ options });
+  const { projectComponent, languageComponent } = buildPrimaryComponents({ language, project });
+  if (typeof projectComponent === 'undefined' || typeof languageComponent === 'undefined') {
+    return [];
+  }
   const secondaryComponents = buildSecondaryComponents({ languageComponent });
   const primaryComponents = [projectComponent, languageComponent];
 

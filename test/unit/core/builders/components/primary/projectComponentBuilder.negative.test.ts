@@ -7,14 +7,14 @@ describe('core', () => {
         describe('projectComponentBuilder', () => {
           describe('negative', () => {
             describe('should return an error', () => {
-              test("when 'type' is an empty string", () => {
+              test("when 'name' is an empty string", () => {
                 // Arrange
-                const type = '';
+                const name = '';
                 const errorExpected = 'invalid type';
 
                 // Act
                 const handler = () => {
-                  projectComponentBuilder({ type });
+                  projectComponentBuilder({ name });
                 };
 
                 // Assert
@@ -22,12 +22,12 @@ describe('core', () => {
               });
             });
             describe('should return undefined', () => {
-              test("when 'type' is an unknown string", () => {
+              test("when 'name' is an unknown string", () => {
                 // Arrange
-                const type = 'unknown';
+                const name = 'unknown';
 
                 // Act
-                const projectComponent = projectComponentBuilder({ type });
+                const projectComponent = projectComponentBuilder({ name });
 
                 // Assert
                 expect(projectComponent).toBeUndefined();

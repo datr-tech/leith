@@ -25,7 +25,8 @@
     "test:unit:cov": "npm run test:unit -- --coverage",
     "test:unit:changed": "npm run test:unit -- -o",
     "test": "npm run test:unit:cov",
-    "prepare": "husky"
+    "prepare": "husky",
+    "pre-push": "npx npm-run-all lint format test analysis build"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.24.7",
